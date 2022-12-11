@@ -1,31 +1,102 @@
+/* General  */
+
+@font-face {
+  font-family: "Rubik80Fade";
+  src: url(../fonts/Rubik80sFade-Regular.ttf);
+}
+
+
+
+/* =========================================================================================== */
 /* /DISPOSITIVOS SUPER PEQUEÑOS  */
 
 @media only screen and (max-width: 600px ){
 
 }
+/* =========================================================================================== */
 
 /*  DISPOSITIVOS PEQUEÑOS */
 @media only screen and (min-width: 600px ){
-
+  
 }
+/* =========================================================================================== */
 /*  DISPOSITIVOS MEDIANOS */
 @media only screen and (min-width: 768px ){
-
+  
 }
 
+/* =========================================================================================== */
 /* DISPOSITIVOS GRANDE  */
 @media only screen and (min-width: 992px ){
+  
+  .App {
+    
+    text-align: center ;
+margin-top: 54px;
+    height: vh ;
+    width: 90vw;
+    margin: 0 auto ;
+      background-color:rgb(25, 20, 67);
+      border-radius: 20px;
+      margin-top: 20px;
+      padding: 50px;
 
-.App {
- display: flex;
- justify-content: center;
+
+    
+  }
+  
+  
+  .App h2 {
+    color : purple;  
+    text-shadow: 2px 2px 1px black ; 
+    font-size: 5rem;
+    font-family: "Rubik80Fade", sans-serif
+    
+  }
+
+  button {
+
+    background: none; 
+    border: solid 2px #fff; 
+    padding: 6px 12px; 
+    border-radius: 4px;
+    color: #fff; 
+    font-weight: bold; 
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    
+  }
+button:hover {
+  background: #c23866;
+  color: #fff; 
+
 }
 
+.card-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
+  gap: 20px;
 }
 
-/* DISPOSITIVOS GRANDES  */
+img{
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+
+  }
+  
+
+
+/* ===========================================================================================  */
+/* DISPOSITIVOS MAs ++ GRANDES  */
 
 @media only screen and (min-width: 1200px ){
-
+  
 }
+/* ===========================================================================================  */
 
