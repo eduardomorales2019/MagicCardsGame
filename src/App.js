@@ -52,21 +52,22 @@ useEffect(() => {
     setCards((prevCards)=> {
       return  prevCards.map((card)=> {
         if (card.src === choiceOne.src){
-          return {...card, match: true }
+          return {...card, matched: true }
         }else {
           return card
         }
       })
-    } )
+    })
       resetTurn()
     } else {
-     
+      resetTurn()
     }
   }
 }, [choiceOne, choiceTwo]);
 
-console.log(cards);
-
+// console.log(cards);
+console.log(choiceOne, "CH1");
+console.log(choiceTwo, "CH2");
 
 
 // RESET CHOICES AND  INCREASE TURN 
@@ -74,7 +75,7 @@ console.log(cards);
 const resetTurn=()=> {
   setChoiceOne(null)
   setChoiceTwo(null)
-  setTurns(prevTurns =>  prevTurns+ 1 ) // parameter (prevturns)this is just a prev state function!!! 
+  setTurns(prevTurns =>  prevTurns + 1 ) // parameter (prevturns)this is just a prev state function!!! 
 }
 // =============================RETURN 
   return (
@@ -91,7 +92,7 @@ const resetTurn=()=> {
           key={card.id} 
           cards={card}
           handleChoice={handleChoice}
-          flipped={card === choiceOne || card === choiceTwo || card === card.match}
+          flipped={card === choiceOne || card === choiceTwo || card.matched}
           />
       </div>
       ))}
