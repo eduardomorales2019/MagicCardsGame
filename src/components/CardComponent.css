@@ -4,7 +4,8 @@
 
 .card img {
 
-	width: 100%;
+	width: 250px;
+	height: 200px;
 	display: block; 
 	border: solid 2px #fff;
 	border-radius: 10px;
@@ -15,12 +16,23 @@
 
 .card .front {
 transform: rotateY(90deg);
+transition: all ease-in .3s;
 position: absolute; 
 
 }
 
 .flipped .front{
 transform: rotateY(0deg);
+transition-delay:.2s;
 
+}
+/* back of card -cover  */
+.card .back {
+	transition: all ease-in .2s; 
+	transition-delay:.2s;
 	
+}
+.flipped .back {
+	transform: rotateY(90deg);
+	transition-delay: 0s;  
 }

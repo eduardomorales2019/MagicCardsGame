@@ -2,10 +2,12 @@ import React from 'react'
 import { pokerImage } from '../utils/pokerimage'
 // import "../App.css"
 import "../components/CardComponent.css"
-const CardComponent = ({cards, handleChoice,flipped}) => {
+const CardComponent = ({cards, handleChoice,flipped, disable}) => {
 
 const handleClick=()=> {
-  handleChoice(cards)
+  if (!disable){
+    handleChoice(cards)
+  }
 }
 
 
